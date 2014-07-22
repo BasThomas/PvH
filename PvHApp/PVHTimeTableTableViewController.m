@@ -79,7 +79,7 @@ NSMutableArray *tableData;
             //[tableData addObject:key[@"hour"]];
         }
         
-        NSLog(@"%i", [tableData count]);
+        NSLog(@"%lu", (unsigned long)[tableData count]);
     }
     
     //[self.tableView reloadData];
@@ -133,7 +133,7 @@ NSMutableArray *tableData;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Geklikt");
-    NSLog(@"%d", indexPath.row);
+    NSLog(@"%ld", (long)indexPath.row);
     NSLog(@"%@", [tableData objectAtIndex:indexPath.row]);
     [self performSegueWithIdentifier:@"OpenHour" sender:self];
 }
